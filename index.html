@@ -1,10 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Web App</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CI/CD Demo Web App</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        animation: fadeIn 1.2s ease-in-out;
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #38bdf8, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        color: #cbd5e1;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #22c55e;
+        border-radius: 50px;
+        font-size: 14px;
+        margin-top: 10px;
+        animation: pulse 1.5s infinite;
+    }
+
+    .update-box {
+        margin-top: 25px;
+        padding: 15px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 12px;
+        font-size: 14px;
+        color: #e2e8f0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 12px;
+        color: #94a3b8;
+    }
+</style>
 </head>
+
 <body>
-    <h1>Name: Aqeel Abbas</h1>
-    <h2>Reg No: NUM-BSCS-2022-38</h2>
+
+<div class="container">
+    <h1>🚀 CI/CD Web App</h1>
+
+    <h2>Name: Aqeel Abbas Khan</h2>
+    <h2>Reg No: NUM_BSCS-2022-38</h2>
+
+    <div class="badge">✔ Deployed via Azure + GitHub</div>
+
+    <div class="update-box">
+        🔄 Every GitHub push automatically updates this page using CI/CD pipeline.<br/>
+        Try editing this text and pushing again!
+    </div>
+</div>
+
+<footer>
+    Built for Cloud Computing Assignment • Azure App Service + GitHub Actions
+</footer>
+
 </body>
 </html>
